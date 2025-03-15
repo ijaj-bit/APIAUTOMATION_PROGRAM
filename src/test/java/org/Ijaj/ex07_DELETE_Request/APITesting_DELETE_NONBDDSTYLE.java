@@ -13,27 +13,26 @@ public class APITesting_DELETE_NONBDDSTYLE {
     @Test
     public void test_patch_NonBDD()
     {
-        String token="b09cd79b9844ec7";
-        String bookingid="1199";
+
+        String token = "fbdfa5516acb319";
+        String bookingid = "5870";
 
 
-        RequestSpecification r;
-        Response response;
-        ValidatableResponse vr;
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.baseUri("https://restful-booker.herokuapp.com/");
+        requestSpecification.basePath("/booking/"+bookingid);
+        requestSpecification.contentType(ContentType.JSON);
+        requestSpecification.cookie("token",token);
 
-        r = RestAssured.given();
-        r.baseUri("https://restful-booker.herokuapp.com");
-        r.basePath("/booking/"+bookingid);
-        r.contentType(ContentType.JSON);
-        r.cookie("Token"+token);
+        requestSpecification.log().all();
 
-        r.log().all();
+        Response response = requestSpecification.when().delete();
 
-        response = r.when().log().all().delete();
+        ValidatableResponse validatableResponse = response.then().log().all();
 
-        //Verification Part 3
-        vr = response.then().log().all();
-        vr.statusCode(200);
+        // validatableResponse.statusCode(200);
+        validatableResponse.statusCode(201);
+
 
 
 

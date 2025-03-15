@@ -1,32 +1,41 @@
 package org.Ijaj.ex05_PUT_Request;
 
-import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
+import io.qameta.allure.Description;
+public class APITesting011_PUT_NONBddStyle {
 
-public class APITesting_PUT_NonBDDStyle{
-    @Description("CHECK PUT REQUEST")
+    // PUT
+
+    // token, booking id - A
+
+//    public void get_token(){ }
+//    public void get_booking_id(){}
+
+    @Description("Verify the PUT Request for the Restful Booker APIs")
     @Test
-    public void test_put_NonBDD()
-    {
-        String token="b239be63239dc91";
-        String bookingid="711";
+    public void test_put_non_bdd(){
 
-        String payloadPUT="{\n" +
-                "    \"firstname\" : \"IJAJ\",\n" +
-                "    \"lastname\" : \"SHAIKH\",\n" +
+        String token = "8d399edbbb6059d";
+        String bookingid = "3208";
+
+        String payloadPUT= "{\n" +
+                "    \"firstname\" : \"Pramod\",\n" +
+                "    \"lastname\" : \"Dutta\",\n" +
                 "    \"totalprice\" : 111,\n" +
-                "    \"depositpaid\" : true,\n" +
+                "    \"depositpaid\" : false,\n" +
                 "    \"bookingdates\" : {\n" +
-                "        \"checkin\" : \"2018-01-01\",\n" +
-                "        \"checkout\" : \"2019-01-01\"\n" +
+                "        \"checkin\" : \"2024-01-01\",\n" +
+                "        \"checkout\" : \"2024-01-01\"\n" +
                 "    },\n" +
-                "    \"additionalneeds\" : \"Breakfast\"\n" +
+                "    \"additionalneeds\" : \"Lunch\"\n" +
                 "}";
+
+
 
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.baseUri("https://restful-booker.herokuapp.com/");
@@ -46,7 +55,7 @@ public class APITesting_PUT_NonBDDStyle{
 
 
 
-
-
     }
+
+
 }
