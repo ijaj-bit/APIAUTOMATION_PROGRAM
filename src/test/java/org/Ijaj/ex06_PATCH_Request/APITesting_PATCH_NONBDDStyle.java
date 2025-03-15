@@ -12,8 +12,8 @@ public class APITesting_PATCH_NONBDDStyle {
     @Test
     public void test_patch_NonBDD()
     {
-        String token="b09cd79b9844ec7";
-        String bookingid="1199";
+        String token="403829eb475973a";
+        String bookingid="8169";
 
         String Payload="{\n" +
                 "    \"firstname\" : \"James\",\n" +

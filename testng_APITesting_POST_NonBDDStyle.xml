@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/aijaz/IdeaProjects/APIAUTOMATION_PROGRAM/src/test/java/org/Ijaj/ex04_POST_Request">
+        <classes>
+            <class name="org.Ijaj.ex04_POST_Request.APITesting_POST_NonBDDStyle">
+                <methods>
+                    <include name="test_POST_NonBDDStyle_Create_Token"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
