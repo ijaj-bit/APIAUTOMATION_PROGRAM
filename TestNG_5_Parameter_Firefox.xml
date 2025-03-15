@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="APITestingSuite">
+    <test name="API Test Cases">
+
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="org.Ijaj.ex08_TestNGExample.TestNG_5_Parameter"/>
+        </classes>
+    </test>
+</suite>
