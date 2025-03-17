@@ -77,7 +77,7 @@ Contributions are welcome! Follow these steps:
 ## Contact
 For any queries or contributions, reach out to:
 - Name: IJAJ R SHAIKH
-- GitHub: 
+- GitHub: https://github.com/ijaj-bit/APIAUTOMATION_PROGRAM
 - Email: ijaj7732@gmail.com
 
 
